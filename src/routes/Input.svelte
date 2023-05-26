@@ -1,4 +1,6 @@
 <script>
+    import QRCode from 'qrcode';
+
 	let urlInput = '';
 
 	const isValidUrl = (str) => {
