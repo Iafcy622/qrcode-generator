@@ -19,7 +19,7 @@
 	};
 </script>
 
-<div class="card p-4 h-3/4 w-3/5 mr-6">
+<div class="card p-4 h-5/6 w-3/5 mr-6 !bg-surface-700">
     <header class="card-header font-semibold text-3xl mb-4">QR Code Generator</header>
     <section class="p-4">
         <div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">

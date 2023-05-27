@@ -9,6 +9,7 @@
 		message: ''
 	};
 	let settings = {
+		type: 'image/png',
 		margin: 2,
 		width: 240,
 		color: {
@@ -66,9 +67,9 @@
 	onMount(generateQrcode());
 </script>
 
-<div class="card p-4 h-3/4 w-2/5">
+<div class="card p-4 h-5/6 w-2/5 !bg-surface-700 relative">
 	<section class="p-4">
-		<div class="output-img mb-4">
+		<div class="output-img mb-6">
 			{#if imgUrl}
 				<img src={imgUrl} alt="qrcode" class="mx-auto w-52" />
 			{/if}
@@ -196,8 +197,8 @@
 			</AccordionItem>
 		</Accordion>
 	</section>
-	<footer class="card-footer">
-		<a href={imgUrl} class="btn variant-filled" download="qrcode">
+	<footer class="card-footer absolute bottom-0 left-0 right-0 mb-4 w-full px-8 flex items-center">
+		<a href={imgUrl} class="btn bg-primary-700 w-full !rounded-r-none" download="qrcode">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -214,6 +215,15 @@
 			</svg>
 			<span>Download</span>
 		</a>
+		<select
+			class="select w-1/4 !border !border-surface-500 !text-surface-300 !bg-surface-400/10"
+			bind:value={settings.type}
+			on:change={generateQrcode}
+		>
+			<option value="image/png">.png</option>
+			<option value="image/jpeg">.jpeg</option>
+			<option value="image/webp">.webp</option>
+		</select>
 	</footer>
 </div>
 

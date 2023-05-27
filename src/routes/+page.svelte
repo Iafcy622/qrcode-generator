@@ -3,7 +3,9 @@
 	import Output from "./Output.svelte";
 </script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<Input />
-	<Output />
+<div class="w-full h-full bg-surface-500">
+	<div class="container mx-auto flex justify-center items-center w-full h-full">
+		<Input />
+		<Output />
+	</div>
 </div>
